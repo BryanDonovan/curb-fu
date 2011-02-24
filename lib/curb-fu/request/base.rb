@@ -82,8 +82,8 @@ module CurbFu
         CurbFu::Response::Base.from_curb_response(curb)
       end
 
-      def delete(url)
-        curb = self.build(url)
+      def delete(url, params = {})
+        curb = self.build(url, params)
         curb.http_delete
         CurbFu::Response::Base.from_curb_response(curb)
       end
